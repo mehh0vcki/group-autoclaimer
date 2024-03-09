@@ -13,7 +13,7 @@ or **ansel** is, probably, the most **user-friendly** and **easy to use** group 
 
 
 
-- quick note!
+* quick note!
 
 now, you can receive support at [this server](https://discord.gg/qvBRP9Wu). any questions, suggestions and etc will be accepted only here from now on.
 
