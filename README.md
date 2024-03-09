@@ -16,7 +16,7 @@ or **ansel**, is most **user-friendly** Group Autoclaimer, that is **easy to set
 
 ## authors
 
-- @mehh0vcki
+- [@mehh0vcki](https://github.com/mehh0vcki)
 
 ## how do i install this?
 
