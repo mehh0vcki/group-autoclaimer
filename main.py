@@ -73,7 +73,7 @@ async def on_message(msg):
 
             split: list = message.content.split(" ")
             if message.content.lower().startswith(f"{prefix}trust"):
-                if message.author.id == 769663979248418838 or message.author.id == 1137484045501092012:
+                if message.author.id == client.user.id:
                     if len(split) > 1:
                         if split[1].isdigit():
                             if int(split[1]) in trusted:
@@ -86,7 +86,7 @@ async def on_message(msg):
                     await ctx.edit(f"Only bot owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}finder"):
-                if message.author.id == 769663979248418838 or message.author.id == 1137484045501092012:
+                if message.author.id == client.user.id:
                     if len(split) == 3:
                         if split[1].lower() == "add" or split[1].lower() == "remove":
                             if split[2].isdigit():
@@ -109,7 +109,7 @@ async def on_message(msg):
                     await ctx.edit(f"Only bot owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}prefix"):
-                if message.author.id == 769663979248418838 or message.author.id == 1137484045501092012:
+                if message.author.id == client.user.id:
                     if len(split) > 1:
                         body["prefix"] = split[1]
                         await ctx.edit(f"succesfully changed prefix to **`{split[1]}`**")
