@@ -1,0 +1,47 @@
+{
+    "webhooks": [
+    ],
+    "claiming_channels": [
+    ],
+    "requirements": {
+        "mode": ">=",
+        "funds": 5,
+        "pending": 5,
+        "members": 1000,
+        "clothing": 20
+    },
+    "debug": {
+        "enable": false,
+        "showAccountSwitchData": true,
+        "showDiscordHandler": true,
+        "showClaimData": true
+    },
+    "autoclaiming": {
+        "customShouts": true,
+        "shouts": [
+            "mehhovcki was here",
+            "ggwp @mehhovcki",
+            "mehhovcki autoclaimer",
+            "mehhovcki faster than u",
+            "i love traili",
+            "@mehhovcki if you want your group back"
+        ]
+    },
+    "colors": {
+        "default": [
+            "#fa5796",
+            "#99254f"
+        ],
+        "account": [
+            "#67cfa9",
+            "#159640"
+        ],
+        "debug": [
+            "#6f5be3",
+            "#482bf0"
+        ]
+    },
+    "trusted": [],
+    "prefix": "//",
+    "token": ""
+}
