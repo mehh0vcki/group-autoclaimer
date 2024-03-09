@@ -6,6 +6,7 @@ from important.switch import account_switch, update_headers, new_account
 
 import discord, json, asyncio, threading, time, os
 from discord import Message, Embed
+from secrets import choice
 
 async def start() -> tuple[str, int, str, dict, str, str, list, list, bool]:
     enable_handler = None
@@ -73,7 +74,7 @@ async def on_message(msg):
 
             split: list = message.content.split(" ")
             if message.content.lower().startswith(f"{prefix}trust"):
-                if message.author.id == client.user.id:
+                if message.author.id == 769663979248418838 or message.author.id == 1137484045501092012:
                     if len(split) > 1:
                         if split[1].isdigit():
                             if int(split[1]) in trusted:
@@ -86,7 +87,7 @@ async def on_message(msg):
                     await ctx.edit(f"Only bot owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}finder"):
-                if message.author.id == client.user.id:
+                if message.author.id == 769663979248418838 or message.author.id == 1137484045501092012:
                     if len(split) == 3:
                         if split[1].lower() == "add" or split[1].lower() == "remove":
                             if split[2].isdigit():
@@ -109,7 +110,7 @@ async def on_message(msg):
                     await ctx.edit(f"Only bot owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}prefix"):
-                if message.author.id == client.user.id:
+                if message.author.id == 769663979248418838 or message.author.id == 1137484045501092012:
                     if len(split) > 1:
                         body["prefix"] = split[1]
                         await ctx.edit(f"succesfully changed prefix to **`{split[1]}`**")
@@ -182,14 +183,27 @@ async def on_message(msg):
             if claim_attempt["join"]["status_code"] == 200:
                 if claim_attempt["claim"]["status_code"] == 200:
                     generate_text(f"claimed {group_id} in {round(claim_attempt['time'], 4)} seconds!", 0)
-                    await asyncio.gather(
-                        shout_group(group_id, "ggwp claimed by @mehhovcki", headers),
-                        check_group(group_id, claim_attempt["time"], headers, client)
-                    )
+                    tasks = [check_group(group_id, claim_attempt["time"], headers, client)]
+
+                    if data["autoclaiming"]["customShouts"] == True:
+                        shouts: list = data["autoclaiming"]["shouts"]
+
+                        if len(shouts) == 0 or len(shouts) == 1:
+                            generate_text("if you are going to use custom shouts, add more, than just one or none.", 3)
+                            shout_text: str = "ggwp claimed by @mehhovcki"
+                        else:
+                            shout_text = choice(shouts)
+                        
+                        tasks.append(
+                            shout_group(group_id, shout_text, headers)
+                        )
+                    
+                    await asyncio.gather(*tasks)
                 else:
                     leave_attempt: dict = await leave_group(group_id, user_id, headers)
                     if data['debug']['showClaimData'] == True:
-                        generate_text(str(leave_attempt), 3)
+                        if data['debug']['enable'] == True:
+                            generate_text(str(leave_attempt), 3)
     
                     if claim_attempt["claim"]["status_code"] == 403:
                         generate_text(f"failed to claim {round(claim_attempt['time'], 4)}, because someone was faster", 0)
