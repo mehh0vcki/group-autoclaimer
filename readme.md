@@ -60,5 +60,3 @@ colors settings are changing colors, that console shows to you. for example, whe
 
 ### how do i help you with this group autoclaimer?
 commit changes. improve code, add new features, etc. everything will be appreciated, and authors will be mentioned!
-### when it will be out?
-i don't know. anytime soon!
