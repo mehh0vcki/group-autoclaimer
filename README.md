@@ -43,8 +43,7 @@ you can understand, how to get [discord token here](https://youtu.be/PCU8obaQI64
     <img width="1200" src="https://github.com/mehh0vcki/group-autoclaimer/blob/main/images/colors.png?raw=true" alt="colors"></p>
 
 colors settings are changing colors, that console shows to you. for example, when original color is red, new will be green. this is actually just to make console not look boring, and give some colors and new look to boring logs. heres table of default colors.
-<center>
-
+<p align="center">
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Default | ![#0a192f](https://via.placeholder.com/40/fa5796?text=+)  ![#99254f](https://via.placeholder.com/40/99254f?text=+)|
@@ -52,7 +51,7 @@ colors settings are changing colors, that console shows to you. for example, whe
 | Debug | ![#6f5be3](https://via.placeholder.com/40/6f5be3?text=+)  ![#482bf0](https://via.placeholder.com/40/482bf0?text=+)|
 
 *(all of the hand picked!)*
-</center>
+</p>
 
 ## faq
 
