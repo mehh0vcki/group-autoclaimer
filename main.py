@@ -74,7 +74,7 @@ async def on_message(msg):
 
             split: list = message.content.split(" ")
             if message.content.lower().startswith(f"{prefix}trust"):
-                if message.author.id == bot.user.id or message.author.id in trusted:
+                if message.author.id == client.user.id or message.author.id in trusted:
                     if len(split) > 1:
                         if split[1].isdigit():
                             if int(split[1]) in trusted:
@@ -84,10 +84,10 @@ async def on_message(msg):
                         else:
                             await ctx.edit(f"You cannot add users by pinging them, or saying their name. Usage: \n> **{prefix}trust `user-id`**")
                 else:
-                    await ctx.edit(f"Only bot owners can use this command.")
+                    await ctx.edit(f"Only client owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}finder"):
-                if message.author.id == bot.user.id or message.author.id in trusted:
+                if message.author.id == client.user.id or message.author.id in trusted:
                     if len(split) == 3:
                         if split[1].lower() == "add" or split[1].lower() == "remove":
                             if split[2].isdigit():
@@ -107,20 +107,20 @@ async def on_message(msg):
                         else:
                             await ctx.edit(f"You need to or remove, or delete finder. Usage: \n> **{prefix}finder `add/remove` `channel-id`**")
                 else:
-                    await ctx.edit(f"Only bot owners can use this command.")
+                    await ctx.edit(f"Only client owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}prefix"):
-                if message.author.id == bot.user.id or message.author.id in trusted:
+                if message.author.id == client.user.id or message.author.id in trusted:
                     if len(split) > 1:
                         body["prefix"] = split[1]
                         await ctx.edit(f"succesfully changed prefix to **`{split[1]}`**")
                     else:
                         await ctx.edit(f"You cannot change prefix to None. Usage: \n> **{prefix}prefix `new-prefix`**")
                 else:
-                    await ctx.edit(f"Only bot owners can use this command.")
+                    await ctx.edit(f"Only client owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}help"):
-                await ctx.edit(f"```> {prefix}help >> shows this command\n{prefix}finder [add/remove] [channel-id] >> adds, or removes channel from claiming [OWNERONLY]\n{prefix}trust [user-id] >> adds user to trusted. allows them use this bot. [OWNERONLY]\n{prefix}prefix [new-prefix] >> changes prefix\n{prefix}data >> shows trusted, claiming channels and current account [OWNERONLY]\n{prefix}groups >> shows how many groups user owns```")
+                await ctx.edit(f"```> {prefix}help >> shows this command\n{prefix}finder [add/remove] [channel-id] >> adds, or removes channel from claiming [OWNERONLY]\n{prefix}trust [user-id] >> adds user to trusted. allows them use this client. [OWNERONLY]\n{prefix}prefix [new-prefix] >> changes prefix\n{prefix}data >> shows trusted, claiming channels and current account [OWNERONLY]\n{prefix}groups >> shows how many groups user owns```")
             
             elif message.content.lower().startswith(f"{prefix}data"):
                 await ctx.edit(f"```user: {username}\nuID: {user_id}\nclaiming: {claiming_channels}\ntrusted: {trusted}```")
