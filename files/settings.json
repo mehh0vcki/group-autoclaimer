@@ -17,6 +17,7 @@
         "showClaimData": true
     },
     "autoclaiming": {
+        "defaultShout": "your default shout here, that will be used if customShouts are false",
         "customShouts": true,
         "shouts": [
             "custom shout 1",
