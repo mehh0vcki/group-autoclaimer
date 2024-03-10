@@ -129,3 +129,4 @@ async def account_switch():
     generate_text("Trying again in 2 seconds!", 1)
     await asyncio.sleep(2)
     return await account_switch()
+## hello chat incorporated. looking into my code, aren't ya? want to improve it? fork!
