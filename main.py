@@ -190,7 +190,7 @@ async def on_message(msg):
 
                         if len(shouts) == 0 or len(shouts) == 1:
                             generate_text("if you are going to use custom shouts, add more, than just one or none.", 3)
-                            shout_text: str = "ggwp claimed by @mehhovcki"
+                            shout_text: str = data["autoclaiming"]["defaultShout"]
                         else:
                             shout_text = choice(shouts)
                         
