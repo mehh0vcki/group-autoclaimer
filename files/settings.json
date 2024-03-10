@@ -19,12 +19,8 @@
     "autoclaiming": {
         "customShouts": true,
         "shouts": [
-            "mehhovcki was here",
-            "ggwp @mehhovcki",
-            "mehhovcki autoclaimer",
-            "mehhovcki faster than u",
-            "i love traili",
-            "@mehhovcki if you want your group back"
+            "custom shout 1",
+            "custom shout 2"
         ]
     },
     "colors": {
