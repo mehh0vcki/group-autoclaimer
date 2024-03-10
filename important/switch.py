@@ -70,7 +70,10 @@ async def account_switch():
         data = json.load(file)
 
     if len(cookies) == 0:
-        raise Exception(f"Amount of cookies are 0!")
+        await send_webhook({"content": f"amount cookies are 0!"})
+        print("Amount of cookies are 0! Press Enter to exit programm...")
+        input()
+        exit(0)
 
     cookie: str = random.choice(cookies)
     generate_text("Trying to get account to work...", 1)
