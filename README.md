@@ -58,6 +58,15 @@ after you install everything and extract everything required, open `cmd` and run
 ```
 * claiming channels are what your bot autoclaiming from. do not add channels manually, but use `//finder add [channel-id]`.
 
+### requirements
+```json
+    "requirements": {
+        "mode": ">=",
+        ...
+    },
+```
+* requirements are settings for detections, that will notify you about group if any of them will be meet. there only 4 modes: `>` *(more than)*, `>=` *(more than or equal to)*, `<` *(less than)* and `<=` *(less than on equal to)*
+
 ### debug
 ```json
     "debug": {
