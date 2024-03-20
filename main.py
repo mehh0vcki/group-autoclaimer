@@ -120,7 +120,7 @@ async def on_message(msg):
                     await ctx.edit(f"Only client owners can use this command.")
 
             elif message.content.lower().startswith(f"{prefix}help"):
-                await ctx.edit(f"```> {prefix}help >> shows this command\n{prefix}finder [add/remove] [channel-id] >> adds, or removes channel from claiming [OWNERONLY]\n{prefix}trust [user-id] >> adds user to trusted. allows them use this client. [OWNERONLY]\n{prefix}prefix [new-prefix] >> changes prefix\n{prefix}data >> shows trusted, claiming channels and current account [OWNERONLY]\n{prefix}groups >> shows how many groups user owns```")
+                await ctx.edit(f"```> {prefix}help >> shows this command\n{prefix}finder [add/remove] [channel-id] >> adds, or removes channel from claiming [OWNERONLY]\n{prefix}trust [user-id] >> adds user to trusted. allows them use this client. [OWNERONLY]\n{prefix}prefix [new-prefix] >> changes prefix\n{prefix}data >> shows trusted, claiming channels and current account [OWNERONLY]\n{prefix}groups >> shows how many groups user owns\n{prefix}addcookie [cookie] >> adds cookie to list of cookies [OWNERONLY]\n{prefix}switch >> switches to another cookie [OWNERONLY]```")
             
             elif message.content.lower().startswith(f"{prefix}data"):
                 await ctx.edit(f"```user: {username}\nuID: {user_id}\nclaiming: {claiming_channels}\ntrusted: {trusted}```")
