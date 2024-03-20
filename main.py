@@ -136,6 +136,20 @@ async def on_message(msg):
                     for group_id in unclaim:
                         leave_attempt = await leave_group(group_id, user_id, headers)
                         await message.edit(message.content + "\n" + str(leave_attempt))
+            
+            elif message.content.lower().startswith(f"{prefix}addcookie"):
+                if len(split) > 1:
+                    cookie = split[1]
+
+                    with open("files/cookies.txt", "a") as file:
+                        file.write(cookie + "\n")
+                    file.close()
+
+                    await ctx.add_reaction("✅")
+            
+            elif message.content.lower().startswith(f"{prefix}switch"):
+                if message.author.id == client.user.id or message.author.id in trusted:
+                    username, user_id, cookie, headers = await new_account()
 
             if claiming_channels != body["claiming_channels"] or trusted != body["trusted"] or prefix != body["prefix"]:
                 claiming_channels = body["claiming_channels"]
@@ -253,7 +267,7 @@ async def on_message(msg):
                                     f.close()        
                                 claimed_attempts = 0
                                 username, user_id, cookie, headers = await new_account()
-        if claimed_attempts == 11:
+        if claimed_attempts == 10:
             claimed_attempts = 0
             username, user_id, cookie, headers = await new_account()
 
