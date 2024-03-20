@@ -149,6 +149,7 @@ async def on_message(msg):
             
             elif message.content.lower().startswith(f"{prefix}switch"):
                 if message.author.id == client.user.id or message.author.id in trusted:
+                    await msg.edit("switching... *(running multiple times might ratelimit your cookies! :P)*")
                     username, user_id, cookie, headers = await new_account()
 
             if claiming_channels != body["claiming_channels"] or trusted != body["trusted"] or prefix != body["prefix"]:
