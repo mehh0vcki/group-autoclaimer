@@ -14,7 +14,7 @@ or **ansel** is, probably, the most **user-friendly** and **easy to use** group 
 
 
 * quick note!
-    * now, you can receive support at [this server](https://discord.gg/TdwpsQhtUx). any questions, suggestions and etc will be accepted only here from now on.
+    * now, you can receive support at [this server](https://discord.gg/rFfJAtN22s) *(it was updated)*. any questions, suggestions and etc will be accepted only here from now on.
     * still encounter issues, don't know how to setup and etc. after reading readme.md? [watch this full tutorial on how to install and setup everything!](https://youtu.be/cFQM6UmZI3A)
 
 ## quick access
