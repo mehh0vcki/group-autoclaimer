@@ -119,3 +119,6 @@ everything is created by [@mehh0vcki](https://github.com/mehh0vcki)
 
 ### faq
 #### there's no questions yet. ask them in my discord, @mehhovcki to make some appear!
+
+## can i get vbucks from this?
+Maybe 🥺
