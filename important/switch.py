@@ -26,7 +26,8 @@ async def update_headers(cookie: str) -> list:
     headers: list = {
         "Cookie": f"GuestData=UserID=-1458690174; .ROBLOSECURITY={cookie}; RBXEventTrackerV2=CreateDate=11/19/2023 12:07:42 PM&rbxid=5189165742&browserid=200781876902;",
         "Content-Type": "application/json",
-        "x-csrf-token": None
+        "x-csrf-token": None,
+        "User-Agent": "Mozilla/5.0 (Linux; Linux x86_64; en-US) AppleWebKit/533.41 (KHTML, like Gecko) Chrome/48.0.1076.318 Safari/533"
     }
 
     try:
