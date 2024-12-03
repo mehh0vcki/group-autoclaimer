@@ -31,7 +31,7 @@ async def update_headers(cookie: str) -> list:
     }
 
     try:
-        response: HttpResponse = await client.post("https://catalog.roblox.com/", headers=headers)
+        response: HttpResponse = await client.post("https://catalog.roblox.com//", headers=headers)
         response_headers: HttpHeaders = response.headers    
     except:
         return await update_headers(cookie)
