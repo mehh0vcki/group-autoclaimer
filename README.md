@@ -1,4 +1,4 @@
-# WIKI IS COMING SOON ** CURRENT README.MD INFORMATION CAN BE OUTDATED ** IF YOU ENCOUNTER ANY ISSUES, USE ISSUES BUTTON
+# current readme.md is outdated. mehhovcki v5.5 is currently in progress.
 <p align="center">
     <img width="500" src="https://raw.githubusercontent.com/mehh0vcki/group-autoclaimer/main/images/title.png" alt="mehhovcki group autoclaimer">
 </p>
