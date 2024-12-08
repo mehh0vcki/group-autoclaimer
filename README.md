@@ -1,6 +1,6 @@
 <div align="center">
 
-![title image](images\title.png)
+![title image](https://github.com/mehh0vcki/group-autoclaimer/blob/dev/images/title.png?raw=true)
 
 </div>
 
